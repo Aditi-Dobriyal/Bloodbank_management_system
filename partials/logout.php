@@ -3,5 +3,5 @@
  echo "Logging you out. please wait...";
 // session_unset();
 session_destroy();
- header("Location: /tryProject");
+ header("Location: ../index.php");
 ?>

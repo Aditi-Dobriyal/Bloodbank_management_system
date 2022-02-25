@@ -7,7 +7,7 @@ include "signupModal.php";
 
 echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 <div class="container-fluid d-flex">
-<img src="/tryProject/img/start.jpg" alt=".." width="45" height="45">
+<img src="../img/start.jpg" alt=".." width="45" height="45">
   <a class="navbar-brand" href="/forum">Blood Bank</a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -15,13 +15,13 @@ echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="/tryProject">Home</a>
+        <a class="nav-link active" aria-current="page" href="../index.php">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/tryProject/partials/about.php">About</a>
+        <a class="nav-link" href="about.php">About</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link " href="/tryProject/partials/contact.php">Contact</a>
+        <a class="nav-link " href="contact.php">Contact</a>
       </li>
     </ul>
     // <div class="row mx-2">
@@ -34,21 +34,21 @@ echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       <li class="nav-item d-flex">
-      <img src="/tryProject/img/donor1.jpeg" alt=".." width="45" height="45">
-        <a class="nav-link active" aria-current="page" href="/tryProject/partials/donor.php">Donor</a>
+      <img src="../img/donor1.jpeg" alt=".." width="45" height="45">
+        <a class="nav-link active" aria-current="page" href="donor.php">Donor</a>
       </li>
       <li class="nav-item d-flex" >
-        <img src="/tryProject/img/patient.jpeg" alt=".." width="45" height="45">
-        <a class="nav-link active" href="/tryProject/partials/patient.php">Patient</a>
+        <img src="../img/patient.jpeg" alt=".." width="45" height="45">
+        <a class="nav-link active" href="patient.php">Patient</a>
       </li>
       <li class="nav-item d-flex">
-      <img src="/tryProject/img/admin.jpeg" alt=".." width="45" height="45">
+      <img src="../img/admin.jpeg" alt=".." width="45" height="45">
 
-        <a class="nav-link active" href="/tryProject/partials/adminModal.php">Admin</a>
+        <a class="nav-link active" href="adminModal.php">Admin</a>
       </li>
     </ul>
   <p class="text-light my-0 mx-3">Welcome '. $_SESSION['useremail'].'</p>
-  <a href="/tryProject/partials/logout.php" class="btn btn-outline-success ml-2">Logout</a>
+  <a href="logout.php" class="btn btn-outline-success ml-2">Logout</a>
 
   </form>';
 }
