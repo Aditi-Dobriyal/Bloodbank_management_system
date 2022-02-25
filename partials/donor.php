@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 
@@ -32,6 +33,33 @@
   <?php
   include 'header.php'; ?>
 
+
+<?php include 'connection.php'; ?>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $dname = $_POST['dname'];
+  $ddis = $_POST['ddisease'];
+  $dage = $_POST['dage'];
+  $dblood = $_POST['dblood'];
+  $dunit = $_POST['dunit'];
+  $changing_unit=$dunit;
+  $sql = "INSERT INTO `donor` (`donor_name`, `donor_disease`, `donor_age`, `donor_unit`,`changing_unit`, `donor_bloodgroup`) VALUES ('$dname', '$ddis', '$dage', '$dunit' ,'$changing_unit', '$dblood')";
+  $result = mysqli_query($conn, $sql);
+  if ($result) {
+    echo '<div class="alert alert-success alert-dismissible fade show my-0" role="alert">
+    <strong>Thank you for Donating Blood!</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+   </div>';
+    
+  } else {
+     echo '<div class="alert alert-warning alert-dismissible fade show my-0" role="alert">
+    <strong>Something went wrong</strong> You should check in on some of those fields above.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+   </div>';
+  }
+}
+?>
 
   <div class="container my-4 " style="border: 2px solid black; width:41%; ">
     <h1 class="text-center  my-2">Blood Donation</h1>
@@ -86,29 +114,3 @@
 
 </html>
 
-<?php include 'connection.php'; ?>
-
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $dname = $_POST['dname'];
-  $ddis = $_POST['ddisease'];
-  $dage = $_POST['dage'];
-  $dblood = $_POST['dblood'];
-  $dunit = $_POST['dunit'];
-  $changing_unit=$dunit;
-  $sql = "INSERT INTO `donor` (`donor_name`, `donor_disease`, `donor_age`, `donor_unit`,`changing_unit`, `donor_bloodgroup`) VALUES ('$dname', '$ddis', '$dage', '$dunit' ,'$changing_unit', '$dblood')";
-  $result = mysqli_query($conn, $sql);
-  if ($result) {
-    echo '<div class="alert alert-success alert-dismissible fade show my-0" role="alert">
-    <strong>Thank you for Donating Blood!</strong>
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-   </div>';
-    
-  } else {
-     echo '<div class="alert alert-warning alert-dismissible fade show my-0" role="alert">
-    <strong>Something went wrong</strong> You should check in on some of those fields above.
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-   </div>';
-  }
-}
-?>

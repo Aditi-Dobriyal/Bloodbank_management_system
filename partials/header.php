@@ -56,7 +56,6 @@ else{
 
 
     echo '
-
         <button class="btn btn-outline-success ml-2"  data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
         <button class="btn btn-outline-success mx-2"  data-bs-toggle="modal" data-bs-target="#signupModal">SignUp</button>';
 }
